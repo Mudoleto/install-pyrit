@@ -64,9 +64,9 @@ function install_python2(){
           if [[ $? == 0 ]]; then
             echo -e "${yellowColour}[+]${endColour}${greenColour}Python2.7 is already installed on your system.${endColour}"
             cd ..
-            curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
-            python2.7 get-pip.py
-            pip2 install scapy=2.5.0
+            curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py &>/dev/null
+            python2.7 get-pip.py &>/dev/null
+            pip2 install scapy=2.5.0 &>/dev/null
             install_pyrit
           else
             echo -e "${yellowColour}[+]${endColour}${redColour}Could not finish installation due to an error${endColour}"
