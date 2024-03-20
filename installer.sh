@@ -24,11 +24,11 @@ function install_pyrit(){
   sudo apt-get install libpcap-dev -y &>/dev/null
   echo -e "${yellowColour}[+]${endcolour}${grayColour}pyrit installation will start${endColour}"
 
-  python2.7 setup.py clean &>/dev/null
+  sudo python2.7 setup.py clean &>/dev/null
   if [[ $? == 0 ]]; then
-    python2.7 setup.py build &>/dev/null
+    sudo python2.7 setup.py build &>/dev/null
     if [[ $? == 0 ]]; then
-      python2.7 setup.py install
+      sudo python2.7 setup.py install
       if [[ $? == 0 ]]; then
         echo -e "${yellowColour}[+]${endColour}${greenColour}The pyrit installation is finished${endColour}"
         sudo ln -sf /usr/bin/python3.11 /usr/local/bin/python &>/dev/null
