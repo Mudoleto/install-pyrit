@@ -28,7 +28,7 @@ function install_pyrit(){
   if [[ $? == 0 ]]; then
     sudo python2.7 setup.py build &>/dev/null
     if [[ $? == 0 ]]; then
-      sudo python2.7 setup.py install
+      sudo python2.7 setup.py install &>/dev/null
       if [[ $? == 0 ]]; then
         echo -e "${yellowColour}[+]${endColour}${greenColour}The pyrit installation is finished${endColour}"
         sudo ln -sf /usr/bin/python3.11 /usr/local/bin/python &>/dev/null
