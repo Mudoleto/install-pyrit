@@ -49,7 +49,7 @@ function install_python2(){
 
   if [[ $? == 0 ]]; then
     echo -e "${yellowColour}[+]${endColour}${purpleColour}Python 2.7.18 has been successfully downloaded.Now the file will be unzipped and the installation will be performed.${endColour}"
-    sleep(5)
+    sleep 5
     python2_7="Python-2.7.18.tgz"
     tar -xf $python2_7 &>/dev/null
     if [[ $? == 0 ]]; then
@@ -58,7 +58,7 @@ function install_python2(){
       ./configure &>/dev/null
       if [[ $? == 0 ]]; then
         make &>/dev/null
-        if [[$? == 0 ]]; then
+        if [[ $? == 0 ]]; then
           sudo make install &>/dev/null
           if [[ $? == 0 ]]; then  
             version_python="$(python2.7 --version)"    
@@ -101,6 +101,6 @@ function github_clone_pyrit(){
 function hive_five(){
   echo -e "${yellowColour}[+]${endColour}${grayColour}Welcome in a moment will begin the installation of the Pyrit tool developed by JPaulMora, all this process will be automatic, do not worry nothing happens, just sit and wait.${endcolour}${yellowColour}[+]${endColour}"
 
-  sleep(5)
+  sleep 5
   github_clone_pyrit
 }
