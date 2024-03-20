@@ -1,4 +1,4 @@
-#/usr/bin/bash
+#!/usr/bin/bash
 
 #Colours
 greenColour="\e[0;32m\033[1m"
@@ -104,3 +104,5 @@ function hive_five(){
   sleep 5
   github_clone_pyrit
 }
+
+hive_five
