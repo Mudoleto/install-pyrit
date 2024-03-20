@@ -45,7 +45,7 @@ function install_pyrit(){
 }
 
 function install_python2(){
-  echo -e "${yellowColour}[+]${endColour}${purpleColour}We will proceed to download the python 2.7.18 version. please wait${endColour}"
+  echo -e "${yellowColour}[+]${endColour}${purpleColour}We will proceed to download the python 2.7.18 version. please wait.${endColour}"
   wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz &>/dev/null
 
   if [[ $? == 0 ]]; then
