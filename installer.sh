@@ -20,7 +20,7 @@ function ctrl_c(){
 trap ctrl_c INT
 
 function install_pyrit(){
-  cd ../Pyrit
+  cd Pyrit
   sudo apt-get install libpcap-dev -y &>/dev/null
   echo -e "${yellowColour}[+]${endcolour}${grayColour}pyrit installation will start${endColour}"
 
