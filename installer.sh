@@ -60,14 +60,9 @@ function install_python2(){
         make &>/dev/null
         if [[ $? == 0 ]]; then
           sudo make install &>/dev/null
-          if [[ $? == 0 ]]; then  
-            version_python="$(python2.7 --version)"    
-            if [[ $version_python == "Python 2.7.18" ]]; then
-              echo -e "${yellowColour}${endColour}${greenColour}Python2.7 is already installed on your system.${endColour}"
-              install_pyrit
-            else
-              echo -e "${yellowColour}[+]${endColour}${redColour}Could not finish installation due to an error${endColour}"
-            fi
+          if [[ $? == 0 ]]; then
+            echo -e "${yellowColour}${endColour}${greenColour}Python2.7 is already installed on your system.${endColour}"
+            install_pyrit
           else
             echo -e "${yellowColour}[+]${endColour}${redColour}Could not finish installation due to an error${endColour}"
           fi
