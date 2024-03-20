@@ -21,7 +21,7 @@ trap ctrl_c INT
 
 function install_pyrit(){
   cd ../Pyrit
-  sudo apt-get install libpcap-dev &>/dev/null
+  sudo apt-get install libpcap-dev -y &>/dev/null
   echo -e "${yellowColour}[+]${endcolour}${grayColour}pyrit installation will start${endColour}"
 
   python2.7 setup.py clean &>/dev/null
@@ -62,7 +62,7 @@ function install_python2(){
         if [[ $? == 0 ]]; then
           sudo make install &>/dev/null
           if [[ $? == 0 ]]; then
-            echo -e "${yellowColour}${endColour}${greenColour}Python2.7 is already installed on your system.${endColour}"
+            echo -e "${yellowColour}[+]${endColour}${greenColour}Python2.7 is already installed on your system.${endColour}"
             install_pyrit
           else
             echo -e "${yellowColour}[+]${endColour}${redColour}Could not finish installation due to an error${endColour}"
