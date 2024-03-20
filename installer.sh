@@ -66,7 +66,7 @@ function install_python2(){
             cd ..
             curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py &>/dev/null
             python2.7 get-pip.py &>/dev/null
-            pip2 install scapy=2.3.2 &>/dev/null
+            pip2 install scapy==2.3.2 &>/dev/null
             install_pyrit
           else
             echo -e "${yellowColour}[+]${endColour}${redColour}Could not finish installation due to an error${endColour}"
